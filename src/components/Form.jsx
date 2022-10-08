@@ -77,10 +77,11 @@ function Form() {
         >
           <option>Normal</option>
           <option>Raro</option>
-          <option>Super Raro</option>
+          <option>Muito raro</option>
         </select>
       </div>
       <Input
+        testid="trunfo-input"
         inputTitle="Super Trunfo"
         type="checkbox"
         nameClass="checkbox-div"
