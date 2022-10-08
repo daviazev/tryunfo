@@ -33,7 +33,7 @@ function Form() {
           testid="attr1-input"
           type="number"
           id="attr1-input"
-          nameClass="attr-div"
+          nameClass="input-div"
           inputClass="attr-input"
         />
 
@@ -42,7 +42,7 @@ function Form() {
           testid="attr2-input"
           type="number"
           id="attr2-input"
-          nameClass="attr-div"
+          nameClass="input-div"
           inputClass="attr-input"
         />
 
@@ -51,7 +51,7 @@ function Form() {
           testid="attr3-input"
           type="number"
           id="attr3-input"
-          nameClass="attr-div"
+          nameClass="input-div"
           inputClass="attr-input"
         />
 
@@ -60,7 +60,7 @@ function Form() {
           testid="image-input"
           type="text"
           id="image-input"
-          nameClass="attr-div"
+          nameClass="input-div"
           inputClass="attr-input"
           placeholder="url da imagem"
         />
@@ -73,6 +73,7 @@ function Form() {
         <select
           data-testid="rare-input"
           id="rare-input"
+          className="select-input"
         >
           <option>Normal</option>
           <option>Raro</option>
@@ -82,12 +83,14 @@ function Form() {
       <Input
         inputTitle="Super Trunfo"
         type="checkbox"
+        nameClass="checkbox-div"
       />
       <button
         data-testid="save-button"
         type="button"
+        className="save-button"
       >
-        Salvar
+        SALVAR
       </button>
     </form>
   );

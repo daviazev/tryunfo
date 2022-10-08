@@ -14,5 +14,14 @@
 
 .attr-input {
   padding: 8px;
-  width: 100px;
+  width: 50%;
+}
+
+.select-input {
+  padding: 8px;
+  width: 100%;
+}
+
+.checkbox-div {
+  padding: 8px 0;
 }

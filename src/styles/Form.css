@@ -1,7 +1,8 @@
 form {
-  background-color: blanchedalmond;
+  background-color: rgb(34 116 165);
   border: 2px solid black;
   border-radius: 8px;
+  color: white;
   font-size: 18px;
   padding: 16px;
 }
@@ -11,14 +12,28 @@ textarea {
 }
 
 
-.attr-div-main {
+/* .attr-div-main {
   margin: 8px;
   padding: 8px;
-}
+} */
 
 .attr-div {
   align-items: center;
   display: flex;
   justify-content: space-between;
   margin: 4px;
+}
+
+.save-button {
+  cursor: pointer;
+  padding: 12px;
+  width: 100%;
+}
+
+.save-button:active {
+  background-color: rgb(255 90 95);
+  color: white;
+  cursor: pointer;
+  padding: 12px;
+  width: 100%;
 }
