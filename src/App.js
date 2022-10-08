@@ -4,6 +4,7 @@ import Form from './components/Form';
 function App() {
   return (
     <div>
+      <h1>Tryunfo</h1>
       <Form />
     </div>
   );

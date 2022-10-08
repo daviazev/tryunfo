@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 
 import '../styles/Input.css';
 
-function Input({ placeholder, testid, type, inputTitle, id }) {
+function Input({ placeholder, testid, type, inputTitle, id, nameClass, inputClass }) {
   return (
-    <div className="input-div">
-      <label htmlFor={ id }>
+    <div className={ nameClass }>
+      <label className="form-label" htmlFor={ id }>
         { inputTitle }
       </label>
       <input
@@ -14,6 +14,7 @@ function Input({ placeholder, testid, type, inputTitle, id }) {
         data-testid={ testid }
         type={ type }
         id={ id }
+        className={ inputClass }
       />
     </div>
   );
@@ -25,6 +26,8 @@ Input.propTypes = {
   type: PropTypes.string.isRequired,
   inputTitle: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
+  nameClass: PropTypes.string.isRequired,
+  inputClass: PropTypes.string.isRequired,
 };
 
 export default Input;

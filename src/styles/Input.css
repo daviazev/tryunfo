@@ -1,4 +1,18 @@
 .input-div {
   display: flex;
   flex-direction: column;
+  margin-top: 8px;
+}
+
+/* .form-label {
+  padding: 8px;
+} */
+
+.name-input {
+  padding: 8px;
+}
+
+.attr-input {
+  padding: 8px;
+  width: 100px;
 }
