@@ -16,14 +16,51 @@ function CardPreview() {
   } = useContext(appContext);
   return (
     <div className="card-preview">
-      <h3>{name}</h3>
-      <img src={ imageUrl } alt={ imageUrl } />
-      <p>{description}</p>
-      <span>{attr1}</span>
-      <span>{attr2}</span>
-      <span>{attr3}</span>
-      <span>{rarity}</span>
-      { isSuperTrunfo ? 'Super Trunfo' : null}
+      <h2 className="card-name">{name}</h2>
+      <img className="card-image" src={ imageUrl } alt={ imageUrl } />
+      <span className="card-description">{description}</span>
+      <div className="card-attr-div-main">
+        <div className="card-attr-div">
+          <span>ATT </span>
+          <span className="teste">--------</span>
+          <span>{ attr1 }</span>
+        </div>
+
+        <div className="card-attr-div">
+          <span>TEC</span>
+          <span className="teste">--------</span>
+          <span>{ attr2 }</span>
+        </div>
+
+        <div className="card-attr-div">
+          <span>TAC</span>
+          <span className="teste">--------</span>
+          <span>{ attr3 }</span>
+        </div>
+
+        <div className="card-attr-div">
+          <span>DEF</span>
+          <span className="teste">--------</span>
+          <span>{ attr3 }</span>
+        </div>
+
+        <div className="card-attr-div">
+          <span>CRE </span>
+          <span className="teste">--------</span>
+          <span>{ attr3 }</span>
+        </div>
+
+        <div className="card-attr-div">
+          <span>LCK</span>
+          <span className="teste">--------</span>
+          <span>{ attr3 }</span>
+        </div>
+
+      </div>
+      <div className="card-rarity-div">
+        <span>{rarity}</span>
+        { isSuperTrunfo ? <span>Super Trunfo</span> : null}
+      </div>
     </div>
   );
 }

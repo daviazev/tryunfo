@@ -11,6 +11,9 @@ function Form() {
     setAttr1,
     setAttr2,
     setAttr3,
+    setAttr4,
+    setAttr5,
+    setAttr6,
     setImageUrl,
     setRarity,
     setIsSuperTrunfo,
@@ -44,7 +47,7 @@ function Form() {
       </div>
       <div className="attr-div-main">
         <Input
-          inputTitle="Atributo 1"
+          inputTitle="ATT"
           testid="attr1-input"
           type="number"
           id="attr1-input"
@@ -54,7 +57,7 @@ function Form() {
         />
 
         <Input
-          inputTitle="Atributo 2"
+          inputTitle="TEC"
           testid="attr2-input"
           type="number"
           id="attr2-input"
@@ -64,13 +67,43 @@ function Form() {
         />
 
         <Input
-          inputTitle="Atributo 3"
+          inputTitle="TAC"
           testid="attr3-input"
           type="number"
           id="attr3-input"
           nameClass="input-div"
           inputClass="attr-input"
           callback={ setAttr3 }
+        />
+
+        <Input
+          inputTitle="DEF"
+          testid="attr4-input"
+          type="number"
+          id="attr4-input"
+          nameClass="input-div"
+          inputClass="attr-input"
+          callback={ setAttr4 }
+        />
+
+        <Input
+          inputTitle="CRE"
+          testid="attr5-input"
+          type="number"
+          id="attr5-input"
+          nameClass="input-div"
+          inputClass="attr-input"
+          callback={ setAttr5 }
+        />
+
+        <Input
+          inputTitle="LCK"
+          testid="attr6-input"
+          type="number"
+          id="attr6-input"
+          nameClass="input-div"
+          inputClass="attr-input"
+          callback={ setAttr6 }
         />
 
         <Input

@@ -1,5 +1,52 @@
 .card-preview {
-  background-color: red;
+  border: 2px solid black;
   border-radius: 8px;
   margin: 8px;
+  padding: 16px;
+}
+
+.card-name {
+  padding: 16px;
+  text-align: end;
+}
+
+.card-image {
+  border-radius: 8px;
+  height: 100%;
+  width: 100%;
+}
+
+.card-description {
+  display: block;
+  font-size: 13px;
+  margin: 4px;
+  text-align: justify;
+}
+
+.card-attr-div-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card-attr-div {
+
+  /* background-color: aqua; */
+  display: flex;
+  justify-content: space-between;
+  margin: 0 8px;
+  padding: 8px;
+  width: 110px;
+}
+
+span {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+}
+
+.card-rarity-div {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 8px;
 }
