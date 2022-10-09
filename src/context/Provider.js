@@ -10,6 +10,7 @@ function Provider({ children }) {
   const [attr3, setAttr3] = useState(0);
   const [imageUrl, setImageUrl] = useState('');
   const [isSuperTrunfo, setIsSuperTrunfo] = useState(false);
+  const [rarity, setRarity] = useState('');
 
   const context = {
     name,
@@ -26,6 +27,8 @@ function Provider({ children }) {
     setImageUrl,
     isSuperTrunfo,
     setIsSuperTrunfo,
+    rarity,
+    setRarity,
   };
 
   return (

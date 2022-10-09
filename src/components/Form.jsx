@@ -1,9 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Input from './Input';
 
 import '../styles/Form.css';
+import appContext from '../context/Context';
 
 function Form() {
+  const {
+    setName,
+    setDescription,
+    setAttr1,
+    setAttr2,
+    setAttr3,
+    setImageUrl,
+    setRarity,
+    setIsSuperTrunfo,
+    isSuperTrunfo,
+  } = useContext(appContext);
+
   return (
     <form className="form">
       <Input
@@ -14,12 +27,14 @@ function Form() {
         id="name-input"
         nameClass="input-div"
         inputClass="name-input"
+        callback={ setName }
       />
-      <div className="input-div ">
+      <div className="input-div">
         <label htmlFor="description-input">
           Descrição
         </label>
         <textarea
+          onChange={ ({ target: { value } }) => setDescription(value) }
           data-testid="description-input"
           placeholder="Descrição da carta"
           id="description-input"
@@ -35,6 +50,7 @@ function Form() {
           id="attr1-input"
           nameClass="input-div"
           inputClass="attr-input"
+          callback={ setAttr1 }
         />
 
         <Input
@@ -44,6 +60,7 @@ function Form() {
           id="attr2-input"
           nameClass="input-div"
           inputClass="attr-input"
+          callback={ setAttr2 }
         />
 
         <Input
@@ -53,6 +70,7 @@ function Form() {
           id="attr3-input"
           nameClass="input-div"
           inputClass="attr-input"
+          callback={ setAttr3 }
         />
 
         <Input
@@ -63,6 +81,7 @@ function Form() {
           nameClass="input-div"
           inputClass="attr-input"
           placeholder="url da imagem"
+          callback={ setImageUrl }
         />
       </div>
 
@@ -74,18 +93,24 @@ function Form() {
           data-testid="rare-input"
           id="rare-input"
           className="select-input"
+          onChange={ ({ target: { value } }) => setRarity(value) }
         >
           <option>Normal</option>
           <option>Raro</option>
           <option>Muito raro</option>
         </select>
       </div>
-      <Input
-        testid="trunfo-input"
-        inputTitle="Super Trunfo"
-        type="checkbox"
-        nameClass="checkbox-div"
-      />
+      <div className="checkbox-div">
+        <label htmlFor="trunfo-input">
+          Super Trunfo
+        </label>
+        <input
+          id="trunfo-input"
+          data-testid="trunfo-input"
+          type="checkbox"
+          onClick={ () => setIsSuperTrunfo(!isSuperTrunfo) }
+        />
+      </div>
       <button
         data-testid="save-button"
         type="button"
