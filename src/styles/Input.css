@@ -1,0 +1,27 @@
+.input-div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+}
+
+/* .form-label {
+  padding: 8px;
+} */
+
+.name-input {
+  padding: 8px;
+}
+
+.attr-input {
+  padding: 8px;
+  width: 50%;
+}
+
+.select-input {
+  padding: 8px;
+  width: 100%;
+}
+
+.checkbox-div {
+  padding: 8px 0;
+}

@@ -1,217 +1,31 @@
-/* CSS FEITO PELO BRADDOCK PARA NOS AJUDAR :)  */
-/* https://trybecourse.slack.com/archives/C0370KS57QW/p1656094669590649 */
-/* https://gist.github.com/thiagobraddock/ff73862f775e34e9c31b46a751840eec#file-global-css-L6 */
-/* OBS: FIZ ALGUMAS ALTERAÇÕES :)  */
-
-/* reset */
-
-* {
+*{
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-html {
-  font-size: 100%;
-} /*16px*/
-
-body {
-  color: #000000;
-  font-family: 'Roboto', sans-serif;
-}
-
-p {
-  margin-bottom: 1rem;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-weight: 400;
 }
 
 h1 {
-  margin-top: 0;
-  font-size: 3.052rem;
+  text-align: center;
+  padding: 24px;
 }
 
-h2 {
-  font-size: 2.441rem;
-}
-
-h3 {
-  font-size: 1.953rem;
-}
-
-/* image  */
-
-img {
-  width: 95%;
-  margin: 4px 0 0 8px;
-  border-radius: 8px;
-}
-
-/* buttons */
 button {
-  cursor: pointer;
-  font-size: 1.2rem;
-  border: transparent;
-  padding: 0.375rem 0.75rem;
-  margin-right: 1rem;
+  border: none;
 }
 
-button:active {
-  background-color: red;
-  box-shadow: var(--shadow-3);
-}
+@media screen and (min-width: 600px) {
+  .main {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    margin: 16px;
+  }
 
-button:disabled {
-  opacity: 0.5;
-  cursor: wait;
-}
+  .form {
+    width: 40%;
+  }
 
-/* form */
-form {
-  padding: 2rem 2.5rem;
-}
-
-input,
-textarea,
-select {
-  width: 100%;
-  margin-bottom: 1rem;
-  padding: 0.7rem 0.75rem;
-  border-radius: 8px;
-  border: 1px solid black;
-}
-
-/* EU CRIEI A PARTIR DAQUI */
-
-.form-div {
-  background-color: #2183c3;
-  color: #f2f2f2;
-  padding: 10px;
-  height: 100vh;
-  width: 2000px;
-}
-
-input {
-  background-color: #f2f2f2;
-}
-
-.card-section{
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  /* gap: 10px; */
-  align-items: center;
-  background-color: #e01023;
-  color: white;
-  width: 100%;
-}
-
-.pre-visu{
-  /* background-color: rebeccapurple; */
-  margin-bottom: 30px;
-}
-
-.card {
-  background-color: #f2f2f2;
-  border: 2px solid black;
-  /* margin-top: 2px; */
-  border-radius: 8px;
-  padding: 16px 8px;
-  width: 300px;
-  height: 530px;
-}
-
-.card-name {
-  text-align: center;
-  color: black;
-}
-
-.description-card{
-  font-size: 12px;
-}
-
-.attributes{
-  width: 95%;
-  margin: 8px;
-  background-color: #FFBF00;
-  color: black;
-  padding: 8px;
-  border-radius: 8px;
-}
-
-.inline{
-  display: inline;
-}
-
-h1{
-  text-align: center;
-}
-
-.App {
-  display: flex;
-  flex-direction: column;
-}
-
-.inputs {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.attr-image-input {
-  width: 629px;
-}
-
-.image-input {
-  width: 629px;
-  margin-left: 11px;
-}
-
-.card-adicionado {
-  margin:16px;
-  /* background-color: greenyellow; */
-  border: 2px black solid;
-  width: 300px;
-  height: 530px;
-  border-radius: 8px;
-}
-
-.Form-Card {
-  display: flex;
-}
-
-.teste-flex-wrap {
-  display: flex;
-  flex-wrap: wrap;
-  /* background-color: red; */
-}
-
-.remove-card-button {
-  margin-top: 8px;
-  background-color: #2183c3;
-  border-radius: 8px;
-  width: 50%;
-  color: white;
-}
-
-.remove-card-button:hover {
-  background-color: #e01023;
-}
-
-.super-trunfo {
-  width: 95%;
-  margin: 8px;
-  background-color: #FFBF00;
-  color: black;
-  padding: 8px;
-  border-radius: 8px;
+  .card-preview {
+    width: 25%;
+    height: 20%;
+  }
 }
