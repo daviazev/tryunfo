@@ -5,8 +5,27 @@
 
 h1 {
   text-align: center;
+  padding: 24px;
 }
 
 button {
   border: none;
+}
+
+@media screen and (min-width: 600px) {
+  .main {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    margin: 16px;
+  }
+
+  .form {
+    width: 40%;
+  }
+
+  .card-preview {
+    width: 25%;
+    height: 20%;
+  }
 }

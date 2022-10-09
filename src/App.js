@@ -6,8 +6,10 @@ function App() {
   return (
     <div>
       <h1>Tryunfo</h1>
-      <Form />
-      <CardPreview />
+      <div className="main">
+        <Form />
+        <CardPreview />
+      </div>
     </div>
   );
 }
