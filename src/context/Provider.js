@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import appContext from './Context';
 
-const desc = 'Cristiano Ronaldo dos Santos Aveiro é um futebolista português que atua como extremo-esquerdo ou ponta de lança. Atualmente joga pelo Manchester United e pela Seleção Portuguesa, onde é capitão.'
+const desc = 'Cristiano Ronaldo dos Santos Aveiro é um futebolista português que atua como extremo-esquerdo ou ponta de lança. Atualmente joga pelo Manchester United e pela Seleção Portuguesa, onde é capitão. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
 
 function Provider({ children }) {
   const [name, setName] = useState('Cristiano');
@@ -15,7 +15,7 @@ function Provider({ children }) {
   const [attr6, setAttr6] = useState(0);
   const [imageUrl, setImageUrl] = useState('https://static.poder360.com.br/2021/08/photo_2021-08-27_15-23-08.jpg');
   const [isSuperTrunfo, setIsSuperTrunfo] = useState(false);
-  const [rarity, setRarity] = useState('Raro');
+  const [rarity, setRarity] = useState('Normal');
 
   const context = {
     name,
