@@ -142,7 +142,7 @@
 .preview-attrs {
   background-color: white;
   border-radius: 0 0 8px 8px;
-  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 13%, 100% 0, 100% 100%, 0 100%);
   display: flex;
   flex-direction: column;
   height: 100%;
