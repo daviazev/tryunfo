@@ -38,24 +38,6 @@ function CardPreview() {
           <span>{ attr3 }</span>
         </div>
 
-        <div className="card-attr-div">
-          <span>DEF</span>
-          <span className="teste">--------</span>
-          <span>{ attr3 }</span>
-        </div>
-
-        <div className="card-attr-div">
-          <span>CRE </span>
-          <span className="teste">--------</span>
-          <span>{ attr3 }</span>
-        </div>
-
-        <div className="card-attr-div">
-          <span>LCK</span>
-          <span className="teste">--------</span>
-          <span>{ attr3 }</span>
-        </div>
-
       </div>
       <div className="card-rarity-div">
         <span>{rarity}</span>

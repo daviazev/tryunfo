@@ -30,8 +30,6 @@
 }
 
 .card-attr-div {
-
-  /* background-color: aqua; */
   display: flex;
   justify-content: space-between;
   margin: 0 8px;

@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+body {
+  background-color: rgba(2, 48, 49, 1);
+}
+
 h1 {
   text-align: center;
   padding: 24px;
@@ -13,12 +17,6 @@ button {
 }
 
 @media screen and (min-width: 600px) {
-  .main {
-    align-items: center;
-    display: flex;
-    justify-content: space-around;
-    margin: 16px;
-  }
 
   .form {
     width: 40%;
