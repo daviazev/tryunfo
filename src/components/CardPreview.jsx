@@ -3,6 +3,8 @@ import appContext from '../context/Context';
 
 import '../styles/CardPreview.css';
 
+import logo from '../images/logo.svg';
+
 const xablau = '.....................';
 
 function CardPreview() {
@@ -52,6 +54,9 @@ function CardPreview() {
       <div className={ rareClass }>
         <h2 className={ cardNameClass }>{name}</h2>
         <img className="card-image" src={ imageUrl } alt={ imageUrl } />
+        { isSuperTrunfo ? (
+          <img src={ logo } className="super-trunfo" alt="super trunfo" />
+        ) : null}
         <span className={ cardDescription }>{description}</span>
         <div className="preview-attrs">
           <div className="card-attr-div">
@@ -73,9 +78,7 @@ function CardPreview() {
           </div>
 
         </div>
-        <div className="card-rarity-div">
-          { isSuperTrunfo ? <span>Super Trunfo</span> : null}
-        </div>
+        <div className="card-rarity-div" />
       </div>
     </div>
   );

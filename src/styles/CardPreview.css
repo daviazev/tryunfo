@@ -128,7 +128,15 @@
 
 .card-image {
   clip-path: polygon(0 0, 100% 0, 100% 67%, 0 83%);
+  height: 46%;
   width: 100%;
+}
+
+.super-trunfo {
+  position: absolute;
+  right: 285px;
+  top: 560px;
+  width: 70px;
 }
 
 .preview-attrs {
