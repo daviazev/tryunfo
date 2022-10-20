@@ -11,10 +11,7 @@ button {
   border: none;
 }
 
-@media screen and (min-width: 600px) {
-
-  .form {
-    width: 40%;
-  }
-
+h1 {
+  text-align: center;
+  color: rgb(47 193 140);
 }

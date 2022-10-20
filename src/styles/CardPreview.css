@@ -1,3 +1,9 @@
+.card-preview-main {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
 .normal-card-name {
   background-color: rgb(2 48 49);
   border-radius: 8px 8px 0 0;

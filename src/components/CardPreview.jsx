@@ -47,32 +47,35 @@ function CardPreview() {
   }, [rarity]);
 
   return (
-    <div className={ rareClass }>
-      <h2 className={ cardNameClass }>{name}</h2>
-      <img className="card-image" src={ imageUrl } alt={ imageUrl } />
-      <span className={ cardDescription }>{description}</span>
-      <div className="preview-attrs">
-        <div className="card-attr-div">
-          <span>attr1</span>
-          <span className="teste">{xablau}</span>
-          <span className={ arrtValue }>{ attr1 }</span>
-        </div>
+    <div className="card-preview-main">
+      <h1>Pré-visualização</h1>
+      <div className={ rareClass }>
+        <h2 className={ cardNameClass }>{name}</h2>
+        <img className="card-image" src={ imageUrl } alt={ imageUrl } />
+        <span className={ cardDescription }>{description}</span>
+        <div className="preview-attrs">
+          <div className="card-attr-div">
+            <span>attr1</span>
+            <span className="teste">{xablau}</span>
+            <span className={ arrtValue }>{ attr1 }</span>
+          </div>
 
-        <div className="card-attr-div">
-          <span>attr2</span>
-          <span className="teste">{xablau}</span>
-          <span className={ arrtValue }>{ attr2 }</span>
-        </div>
+          <div className="card-attr-div">
+            <span>attr2</span>
+            <span className="teste">{xablau}</span>
+            <span className={ arrtValue }>{ attr2 }</span>
+          </div>
 
-        <div className="card-attr-div">
-          <span>attr3</span>
-          <span className="teste">{xablau}</span>
-          <span className={ arrtValue }>{ attr3 }</span>
-        </div>
+          <div className="card-attr-div">
+            <span>attr3</span>
+            <span className="teste">{xablau}</span>
+            <span className={ arrtValue }>{ attr3 }</span>
+          </div>
 
-      </div>
-      <div className="card-rarity-div">
-        { isSuperTrunfo ? <span>Super Trunfo</span> : null}
+        </div>
+        <div className="card-rarity-div">
+          { isSuperTrunfo ? <span>Super Trunfo</span> : null}
+        </div>
       </div>
     </div>
   );
