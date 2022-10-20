@@ -9,7 +9,7 @@
 }
 
 .logo-content > img {
-  width: 16%;
+  width: 350px;
 }
 
 .new-card-section {
@@ -17,8 +17,9 @@
   background-color: white;
   border-radius: 16px;
   display: flex;
-  justify-content: space-around;
+  gap: 200px;
+  justify-content: center;
   margin: 16px;
-  padding: 16px;
-  width: 90%;
+  padding: 32px;
+  width: 70%;
 }

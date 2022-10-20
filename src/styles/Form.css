@@ -39,6 +39,8 @@ select {
 }
 
 .save-button {
+  background-color: rgba(3, 107, 82, 1);
+  color: white;
   cursor: pointer;
   padding: 12px;
   width: 40%;
@@ -49,5 +51,5 @@ select {
   color: white;
   cursor: pointer;
   padding: 12px;
-  width: 100%;
+  width: 40%;
 }
