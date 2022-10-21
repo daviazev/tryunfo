@@ -4,17 +4,23 @@
   margin-top: 8px;
 }
 
-/* .form-label {
-  padding: 8px;
-} */
+.xablau {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+}
 
 .name-input {
+  border-left: none;
+  border-right: none;
+  border-top: none;
   padding: 8px;
 }
 
 .attr-input {
   padding: 8px;
-  width: 50%;
+  width: 65%;
 }
 
 .select-input {
@@ -23,5 +29,8 @@
 }
 
 .checkbox-div {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
   padding: 8px 0;
 }

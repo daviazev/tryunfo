@@ -1,22 +1,35 @@
+.div-form-main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
 form {
-  background-color: rgb(34 116 165);
-  border: 2px solid black;
   border-radius: 8px;
-  color: white;
+  color: black;
   font-size: 18px;
   margin: 8px;
   padding: 16px;
+  width: 80%;
 }
 
 textarea {
+  border-left: none;
+  border-right: none;
+  border-top: none;
   padding: 8px;
 }
 
+select {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
 
-/* .attr-div-main {
-  margin: 8px;
-  padding: 8px;
-} */
+.attr-div-main {
+  padding: 8px 0;
+}
 
 .attr-div {
   align-items: center;
@@ -26,9 +39,11 @@ textarea {
 }
 
 .save-button {
+  background-color: rgba(3, 107, 82, 1);
+  color: white;
   cursor: pointer;
   padding: 12px;
-  width: 100%;
+  width: 40%;
 }
 
 .save-button:active {
@@ -36,5 +51,5 @@ textarea {
   color: white;
   cursor: pointer;
   padding: 12px;
-  width: 100%;
+  width: 40%;
 }

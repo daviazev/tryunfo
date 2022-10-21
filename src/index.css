@@ -1,31 +1,17 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
 
-h1 {
-  text-align: center;
-  padding: 24px;
+body {
+  background-color: rgba(2, 48, 49, 1);
 }
 
 button {
   border: none;
 }
 
-@media screen and (min-width: 600px) {
-  .main {
-    align-items: center;
-    display: flex;
-    justify-content: space-around;
-    margin: 16px;
-  }
-
-  .form {
-    width: 40%;
-  }
-
-  .card-preview {
-    width: 25%;
-    height: 20%;
-  }
+h1 {
+  text-align: center;
+  color: rgb(47 193 140);
 }
