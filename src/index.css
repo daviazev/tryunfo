@@ -28,6 +28,7 @@ h1 {
 }
 
 .search-and-deck {
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;

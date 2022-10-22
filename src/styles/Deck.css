@@ -1,0 +1,28 @@
+.deck-main-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+}
+
+.cards-in-deck {
+  margin: 53px;
+}
+
+.remove-card-button {
+  border-radius: 0 0 8px 8px;
+  display: none;
+  padding: 16px;
+  position: absolute;
+  right: 58px;
+  top: 494px;
+  width: 130px;
+}
+
+.remove-card-button:hover {
+  background-color: red;
+  color: white;
+}
+
+.normal:hover .remove-card-button {
+  display: block;
+}
