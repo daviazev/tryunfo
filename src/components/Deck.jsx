@@ -11,7 +11,7 @@ function Deck() {
       <h1>Deck de cartas</h1>
       {deck.map((obj) => (
         <div key={ obj.name }>
-          <img src={ obj.imageUrl } />
+          <img src={ obj.imageUrl } alt="" />
           <h1>{obj.name}</h1>
         </div>
       ))}
