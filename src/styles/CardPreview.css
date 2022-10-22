@@ -19,17 +19,18 @@
   box-shadow: 2px 2px 8px 5px black;
   display: flex;
   flex-direction: column;
-  height: 400px;
+  height: 450px;
+  justify-content: space-between;
   padding: 12px;
-  width: 200px;
+  position: relative;
+  width: 220px;
 }
 
 .normal-card-description {
   color: white;
-  font-size: 10px;
-  margin-top: -40px;
+  font-size: 12px;
+  margin-top: -15px;
   text-align: justify;
-  transform: rotate(352deg);
   width: 100%;
 }
 
@@ -60,17 +61,19 @@
   box-shadow: 2px 2px 8px 5px black;
   display: flex;
   flex-direction: column;
-  height: 400px;
+  gap: 12px;
+  height: 450px;
+  justify-content: space-between;
   padding: 12px;
-  width: 200px;
+  position: relative;
+  width: 220px;
 }
 
 .rare-card-description {
   color: black;
-  font-size: 10px;
-  margin-top: -40px;
+  font-size: 12px;
+  margin-top: -15px;
   text-align: justify;
-  transform: rotate(352deg);
   width: 100%;
 }
 
@@ -101,17 +104,19 @@
   box-shadow: 2px 2px 8px 5px black;
   display: flex;
   flex-direction: column;
-  height: 400px;
+  gap: 12px;
+  height: 450px;
+  justify-content: space-between;
   padding: 12px;
-  width: 200px;
+  position: relative;
+  width: 220px;
 }
 
 .very-rare-card-description {
   color: black;
-  font-size: 10px;
-  margin-top: -40px;
+  font-size: 12px;
+  margin-top: -15px;
   text-align: justify;
-  transform: rotate(352deg);
   width: 100%;
 }
 
@@ -127,26 +132,24 @@
 }
 
 .card-image {
-  clip-path: polygon(0 0, 100% 0, 100% 67%, 0 83%);
-  height: 46%;
+  height: 180px;
   width: 100%;
 }
 
 .super-trunfo {
   position: absolute;
-  right: 285px;
-  top: 560px;
+  right: 10px;
+  top: 180px;
   width: 70px;
 }
 
 .preview-attrs {
   background-color: white;
   border-radius: 0 0 8px 8px;
-  clip-path: polygon(0 13%, 100% 0, 100% 100%, 0 100%);
   display: flex;
   flex-direction: column;
-  height: 100%;
-  justify-content: center;
+  gap: 16px;
+  height: 27%;
   padding: 16px;
 }
 
@@ -156,6 +159,5 @@
   border-radius: 8px;
   display: flex;
   gap: 8px;
-  margin: 12px 4px 0;
   padding: 0 0 0 8px;
 }

@@ -43,7 +43,7 @@ function Form() {
             id="description-input"
             cols="10"
             rows="5"
-            maxLength="200"
+            maxLength="170"
           />
         </div>
         <div className="attr-div-main">

@@ -2,9 +2,9 @@ import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import appContext from './Context';
 
-const cristiano = `Cristiano Ronaldo dos Santos Aveiro é um futebolista português que 
-atua como extremo-esquerdo ou ponta de lança. Atualmente joga pelo Manchester 
-United e pela Seleção Portuguesa, onde é capitão.`;
+const cristiano = `Cristiano Ronaldo dos Santos Aveiro é um futebolista português 
+que atua como extremo-esquerdo ou ponta de lança. Atualmente joga pelo Manchester 
+United e por Portugal.`;
 
 function Provider({ children }) {
   const [name, setName] = useState('Cristiano');

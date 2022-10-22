@@ -52,11 +52,13 @@ function CardPreview() {
     <div className="card-preview-main">
       <h1>Pré-visualização</h1>
       <div className={ rareClass }>
-        <h2 className={ cardNameClass }>{name}</h2>
-        <img className="card-image" src={ imageUrl } alt={ imageUrl } />
-        { isSuperTrunfo ? (
-          <img src={ logo } className="super-trunfo" alt="super trunfo" />
-        ) : null}
+        <div>
+          <h2 className={ cardNameClass }>{name}</h2>
+          <img className="card-image" src={ imageUrl } alt={ imageUrl } />
+          { isSuperTrunfo ? (
+            <img src={ logo } className="super-trunfo" alt="super trunfo" />
+          ) : null}
+        </div>
         <span className={ cardDescription }>{description}</span>
         <div className="preview-attrs">
           <div className="card-attr-div">
