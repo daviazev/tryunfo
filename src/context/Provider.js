@@ -16,6 +16,7 @@ function Provider({ children }) {
   const [isSuperTrunfo, setIsSuperTrunfo] = useState(false);
   const [rarity, setRarity] = useState('Normal');
   const [deck, setDeck] = useState([]);
+  const [id, setId] = useState(0);
 
   const context = {
     name,
@@ -36,6 +37,8 @@ function Provider({ children }) {
     setRarity,
     deck,
     setDeck,
+    id,
+    setId,
   };
 
   return (
