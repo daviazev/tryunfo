@@ -15,6 +15,7 @@ function Provider({ children }) {
   const [imageUrl, setImageUrl] = useState('https://static.poder360.com.br/2021/08/photo_2021-08-27_15-23-08.jpg');
   const [isSuperTrunfo, setIsSuperTrunfo] = useState(false);
   const [rarity, setRarity] = useState('Normal');
+  const [deck, setDeck] = useState([]);
 
   const context = {
     name,
@@ -33,6 +34,8 @@ function Provider({ children }) {
     setIsSuperTrunfo,
     rarity,
     setRarity,
+    deck,
+    setDeck,
   };
 
   return (

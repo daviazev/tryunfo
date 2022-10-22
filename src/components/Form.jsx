@@ -7,6 +7,13 @@ import appContext from '../context/Context';
 
 function Form() {
   const {
+    name,
+    description,
+    attr1,
+    attr2,
+    attr3,
+    imageUrl,
+    rarity,
     setName,
     setDescription,
     setAttr1,
@@ -16,7 +23,17 @@ function Form() {
     setRarity,
     setIsSuperTrunfo,
     isSuperTrunfo,
+    setDeck,
+    deck,
   } = useContext(appContext);
+
+  const saveCard = () => {
+    const cardToSave = {
+      name, description, attr1, attr2, attr3, imageUrl, rarity,
+    };
+
+    setDeck([...deck, cardToSave]);
+  };
 
   return (
     <div className="div-form-main">
@@ -119,6 +136,7 @@ function Form() {
             </label>
           </div>
           <button
+            onClick={ () => saveCard() }
             data-testid="save-button"
             type="button"
             className="save-button"
