@@ -45,7 +45,6 @@ function CardPreview() {
       setCardDescription('very-rare-card-description');
       setAttrValue('very-rare-attr-value');
     }
-    console.log(rareClass);
   }, [rarity]);
 
   return (
@@ -56,7 +55,7 @@ function CardPreview() {
           <h2 className={ cardNameClass }>{name}</h2>
           <img className="card-image" src={ imageUrl } alt={ imageUrl } />
           { isSuperTrunfo ? (
-            <img src={ logo } className="super-trunfo" alt="super trunfo" />
+            <img src={ logo } className="super-trunfo" alt="super trunfo icon" />
           ) : null}
         </div>
         <span className={ cardDescription }>{description}</span>
@@ -80,7 +79,6 @@ function CardPreview() {
           </div>
 
         </div>
-        <div className="card-rarity-div" />
       </div>
     </div>
   );
