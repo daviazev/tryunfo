@@ -33,7 +33,7 @@ function Form() {
 
   const saveCard = () => {
     const cardToSave = {
-      id, name, description, attr1, attr2, attr3, imageUrl, rarity,
+      id, name, description, attr1, attr2, attr3, imageUrl, rarity, isSuperTrunfo,
     };
 
     setDeck([...deck, cardToSave]);
