@@ -6,11 +6,17 @@ function Deck() {
 
   console.log(deck);
 
+  const setClass = (rarity) => {
+    if (rarity === 'Normal') return 'normal';
+    if (rarity === 'Raro') return 'rare';
+    return 'very-rare';
+  };
+
   return (
     <div>
       <h1>Deck de cartas</h1>
       {deck.map((obj) => (
-        <div key={ obj.name }>
+        <div className={ setClass(obj.rarity) } key={ obj.id }>
           <img src={ obj.imageUrl } alt="" />
           <h1>{obj.name}</h1>
         </div>

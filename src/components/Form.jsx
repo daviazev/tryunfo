@@ -25,14 +25,20 @@ function Form() {
     isSuperTrunfo,
     setDeck,
     deck,
+    id,
+    setId,
   } = useContext(appContext);
+
+  console.log(rarity);
 
   const saveCard = () => {
     const cardToSave = {
-      name, description, attr1, attr2, attr3, imageUrl, rarity,
+      id, name, description, attr1, attr2, attr3, imageUrl, rarity,
     };
 
     setDeck([...deck, cardToSave]);
+
+    setId(id + 1);
   };
 
   return (
