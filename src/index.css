@@ -26,3 +26,9 @@ h1 {
   height: 100vh;
   justify-content: center;
 }
+
+.search-and-deck {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
