@@ -9,8 +9,6 @@ const xablau = '.....................';
 function Deck() {
   const { deck, setDeck } = useContext(appContext);
 
-  // console.log(deck);
-
   const rarityClass = (rarity) => {
     if (rarity === 'Normal') return 'normal';
     if (rarity === 'Raro') return 'rare';
@@ -54,6 +52,8 @@ function Deck() {
                   alt="trash icon"
                   className="remove-card-button"
                   onClick={ () => removeCard(obj.id) }
+                  onKeyDown={ () => removeCard(obj.id) }
+                  role="presentation"
                 />
               </div>
               <img
@@ -84,16 +84,7 @@ function Deck() {
                 <span>{xablau}</span>
                 <span className={ attrValueClass(obj.rarity) }>{ obj.attr3 }</span>
               </div>
-
             </div>
-            {/* <button
-              type="button"
-              onClick={ () => removeCard(obj.id) }
-              className="remove-card-button"
-            >
-              REMOVER
-
-            </button> */}
           </div>
         ))}
       </div>

@@ -29,8 +29,6 @@ function Form() {
     setId,
   } = useContext(appContext);
 
-  console.log(rarity);
-
   const saveCard = () => {
     const cardToSave = {
       id, name, description, attr1, attr2, attr3, imageUrl, rarity, isSuperTrunfo,
