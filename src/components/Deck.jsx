@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import appContext from '../context/Context';
 import logo from '../images/logo.svg';
+import trash from '../images/trash.svg';
 import '../styles/Deck.css';
 
 const xablau = '.....................';
@@ -46,7 +47,15 @@ function Deck() {
         {deck.map((obj) => (
           <div className={ `${rarityClass(obj.rarity)} cards-in-deck` } key={ obj.id }>
             <div>
-              <h2 className={ nameClass(obj.rarity) }>{obj.name}</h2>
+              <div className="card-header">
+                <h2 className={ nameClass(obj.rarity) }>{obj.name}</h2>
+                <img
+                  src={ trash }
+                  alt="trash icon"
+                  className="remove-card-button"
+                  onClick={ () => removeCard(obj.id) }
+                />
+              </div>
               <img
                 className="card-image"
                 src={ obj.imageUrl }
@@ -77,14 +86,14 @@ function Deck() {
               </div>
 
             </div>
-            <button
+            {/* <button
               type="button"
               onClick={ () => removeCard(obj.id) }
               className="remove-card-button"
             >
               REMOVER
 
-            </button>
+            </button> */}
           </div>
         ))}
       </div>

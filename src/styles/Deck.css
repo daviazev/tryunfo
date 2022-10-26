@@ -18,11 +18,29 @@
   width: 130px;
 }
 
-.remove-card-button:hover {
-  background-color: red;
-  color: white;
+.normal:hover .remove-card-button {
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  right: 8px;
+  top: 1px;
+  width: 24px;
 }
 
-.normal:hover .remove-card-button {
+.rare:hover .remove-card-button {
+  cursor: pointer;
   display: block;
+  position: absolute;
+  right: 8px;
+  top: 1px;
+  width: 24px;
+}
+
+.very-rare:hover .remove-card-button {
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  right: 8px;
+  top: 1px;
+  width: 24px;
 }
