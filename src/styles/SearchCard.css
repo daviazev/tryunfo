@@ -1,0 +1,36 @@
+.search-main-content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-container {
+  align-items: center;
+  background-color: rgba(3, 107, 82, 1);
+  border-radius: 8px;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 16px;
+  padding: 16px;
+  width: 945px;
+}
+
+.search-by-name {
+  background-color: white;
+  border-radius: 8px;
+  padding: 8px;
+  width: 20%;
+}
+
+/* .search-by-name::placeholder {
+  color: white;
+} */
+
+.search-by-rarity {
+  background-color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px;
+  width: 20%;
+}

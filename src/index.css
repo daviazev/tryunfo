@@ -9,6 +9,7 @@ body {
 
 button {
   border: none;
+  cursor: pointer;
 }
 
 h1 {
@@ -24,5 +25,12 @@ h1 {
   gap: 16px;
   flex-direction: column;
   height: 100vh;
+  justify-content: center;
+}
+
+.search-and-deck {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
 }

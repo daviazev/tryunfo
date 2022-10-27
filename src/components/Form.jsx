@@ -1,22 +1,36 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Input from './Input';
 
 import '../styles/Form.css';
 import appContext from '../context/Context';
 
 function Form() {
+  const [superTrunfo, setSuperTrunfo] = useState(false);
+
   const {
-    setName,
-    setDescription,
-    setAttr1,
-    setAttr2,
-    setAttr3,
-    setImageUrl,
-    setRarity,
-    setIsSuperTrunfo,
-    isSuperTrunfo,
+    name, description, attr1, attr2, attr3, imageUrl, rarity, setName, setDescription,
+    setAttr1, setAttr2, setAttr3, setImageUrl, setRarity, setIsSuperTrunfo,
+    isSuperTrunfo, setDeck, deck, id, setId,
   } = useContext(appContext);
+
+  const saveCard = () => {
+    const cardToSave = {
+      id, name, description, attr1, attr2, attr3, imageUrl, rarity, isSuperTrunfo,
+    };
+
+    setDeck([...deck, cardToSave]);
+    setId(id + 1);
+  };
+
+  useEffect(() => {
+    if (deck.some((card) => card.isSuperTrunfo)) {
+      setSuperTrunfo(true);
+      setIsSuperTrunfo(false);
+    } else {
+      setSuperTrunfo(false);
+    }
+  }, [deck]);
 
   return (
     <div className="div-form-main">
@@ -43,7 +57,7 @@ function Form() {
             id="description-input"
             cols="10"
             rows="5"
-            maxLength="200"
+            maxLength="170"
           />
         </div>
         <div className="attr-div-main">
@@ -107,18 +121,23 @@ function Form() {
           </select>
         </div>
         <div className="checkbox-div">
-          <div>
-            <input
-              id="trunfo-input"
-              data-testid="trunfo-input"
-              type="checkbox"
-              onClick={ () => setIsSuperTrunfo(!isSuperTrunfo) }
-            />
-            <label htmlFor="trunfo-input">
-              Super Trunfo
-            </label>
-          </div>
+          {
+            superTrunfo ? ('Você já tem um super trunfo :)') : (
+              <div>
+                <input
+                  id="trunfo-input"
+                  data-testid="trunfo-input"
+                  type="checkbox"
+                  onClick={ () => setIsSuperTrunfo(!isSuperTrunfo) }
+                />
+                <label htmlFor="trunfo-input">
+                  Super Trunfo
+                </label>
+              </div>
+            )
+          }
           <button
+            onClick={ () => saveCard() }
             data-testid="save-button"
             type="button"
             className="save-button"

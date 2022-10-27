@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Form from './components/Form';
 import CardPreview from './components/CardPreview';
+import Deck from './components/Deck';
+import SearchCard from './components/SeachCard';
 
 import logo from './images/logo.svg';
 
@@ -45,6 +47,10 @@ function App() {
           <Form />
           <CardPreview />
         </div>
+      </div>
+      <div className="search-and-deck">
+        <SearchCard />
+        <Deck />
       </div>
     </>
   );
