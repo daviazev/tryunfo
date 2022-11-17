@@ -10,6 +10,8 @@ function Deck() {
   const { deck, setDeck, isFiltering, secondDeck } = useContext(appContext);
   const [array, setArray] = useState([]);
 
+  console.log(isFiltering);
+
   useEffect(() => {
     if (isFiltering) {
       setArray(secondDeck);

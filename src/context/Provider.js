@@ -23,16 +23,12 @@ function Provider({ children }) {
   const [nameFilt, setNameFilt] = useState('');
 
   // console.log(deck);
-  // console.log(nameFilt);
-
-  // console.log('>>>>>>>>>>>.', secondDeck);
+  // console.log(secondDeck);
 
   useEffect(() => {
     if (isFiltering) {
       const filtering = deck.filter((jog) => jog.name.toLowerCase()
         .includes(nameFilt.toLocaleLowerCase()));
-      // console.log('+++++++++', filtering);
-      // console.log('-----------', deck);
       setSecondDeck(filtering);
     } else {
       setSecondDeck([]);
@@ -65,6 +61,7 @@ function Provider({ children }) {
     setNameFilt,
     nameFilt,
     secondDeck,
+    setSecondDeck,
   };
 
   return (

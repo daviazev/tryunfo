@@ -1,10 +1,30 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import appContext from '../context/Context';
 import '../styles/SearchCard.css';
 
 function SearchCard() {
-  const { setIsFiltering, setNameFilt } = useContext(appContext);
+  const [rariryValue, setRarityValue] = useState('Todas');
+
+  const {
+    setIsFiltering, setNameFilt, deck, secondDeck, setSecondDeck,
+  } = useContext(appContext);
+
+  // console.log('secondDeck', secondDeck);
+  // console.log('deck', deck);
+
+  useEffect(() => {
+    console.log(rariryValue);
+    if (rariryValue !== 'Todas') {
+      // console.log('aaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
+      const filtering = deck.filter(({ rarity }) => rarity === rariryValue);
+      // console.log('dpppppppppppppp', filtering);
+      setSecondDeck(filtering);
+      setIsFiltering(true);
+    } else {
+      setIsFiltering(false);
+    }
+  }, [rariryValue]);
 
   const searchCard = (value) => {
     if (value.length > 0) {
@@ -14,6 +34,18 @@ function SearchCard() {
       setIsFiltering(false);
     }
   };
+
+  // const rarityFilter = (value = 'Todas') => {
+  //   console.log(value);
+  //   if (value !== 'Todas') {
+  //     const filtering = deck.filter(({ rarity }) => rarity === value);
+  //     // console.log('dpppppppppppppp', filtering);
+  //     setSecondDeck(filtering);
+  //     setIsFiltering(true);
+  //   } else {
+  //     setIsFiltering(false);
+  //   }
+  // };
 
   return (
     <div className="search-main-content">
@@ -26,8 +58,11 @@ function SearchCard() {
           placeholder="Nome da Carta"
           type="text"
         />
-        <select className="search-by-rarity">
-          <option>Raridade</option>
+        <select
+          className="search-by-rarity"
+          onClick={ ({ target: { value } }) => setRarityValue(value) }
+        >
+          <option>Todas</option>
           <option>Normal</option>
           <option>Raro</option>
           <option>Muito raro</option>
