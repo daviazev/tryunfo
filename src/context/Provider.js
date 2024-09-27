@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import appContext from './Context';
 
 const cristiano = `Cristiano Ronaldo dos Santos Aveiro é um futebolista português 
@@ -16,7 +16,24 @@ function Provider({ children }) {
   const [isSuperTrunfo, setIsSuperTrunfo] = useState(false);
   const [rarity, setRarity] = useState('Normal');
   const [deck, setDeck] = useState([]);
+  const [secondDeck, setSecondDeck] = useState(deck);
   const [id, setId] = useState(0);
+  const [isFiltering, setIsFiltering] = useState(false);
+
+  const [nameFilt, setNameFilt] = useState('');
+
+  // console.log(deck);
+  // console.log(secondDeck);
+
+  useEffect(() => {
+    if (isFiltering) {
+      const filtering = deck.filter((jog) => jog.name.toLowerCase()
+        .includes(nameFilt.toLocaleLowerCase()));
+      setSecondDeck(filtering);
+    } else {
+      setSecondDeck([]);
+    }
+  }, [isFiltering]);
 
   const context = {
     name,
@@ -39,6 +56,12 @@ function Provider({ children }) {
     setDeck,
     id,
     setId,
+    isFiltering,
+    setIsFiltering,
+    setNameFilt,
+    nameFilt,
+    secondDeck,
+    setSecondDeck,
   };
 
   return (

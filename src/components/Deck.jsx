@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import appContext from '../context/Context';
 import logo from '../images/logo.svg';
 import trash from '../images/trash.svg';
@@ -7,7 +7,18 @@ import '../styles/Deck.css';
 const xablau = '.....................';
 
 function Deck() {
-  const { deck, setDeck } = useContext(appContext);
+  const { deck, setDeck, isFiltering, secondDeck } = useContext(appContext);
+  const [array, setArray] = useState([]);
+
+  console.log(isFiltering);
+
+  useEffect(() => {
+    if (isFiltering) {
+      setArray(secondDeck);
+    } else {
+      setArray(deck);
+    }
+  }, [deck, secondDeck, isFiltering]);
 
   const rarityClass = (rarity) => {
     if (rarity === 'Normal') return 'normal';
@@ -42,7 +53,7 @@ function Deck() {
     <>
       <h1>Deck de cartas</h1>
       <div className="deck-main-container">
-        {deck.map((obj) => (
+        {array.map((obj) => (
           <div className={ `${rarityClass(obj.rarity)} cards-in-deck` } key={ obj.id }>
             <div>
               <div className="card-header">
